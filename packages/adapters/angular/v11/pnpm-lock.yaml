@@ -10,13 +10,13 @@ devDependencies:
     version: 11.2.14
   '@angular/compiler-cli':
     specifier: 11.2.14
-    version: 11.2.14(@angular/compiler@11.2.14)(typescript@4.1.6)
+    version: 11.2.14(@angular/compiler@11.2.14)(typescript@4.1.2)
   '@angular/core':
     specifier: 11.2.14
     version: 11.2.14(rxjs@6.5.5)(zone.js@0.11.8)
   '@public-ui/components':
-    specifier: 1.6.0-rc.28
-    version: 1.6.0-rc.28
+    specifier: 1.6.0
+    version: 1.6.0
   '@types/minimatch':
     specifier: 5.1.2
     version: 5.1.2
@@ -43,7 +43,7 @@ devDependencies:
     version: 2.6.2
   typescript:
     specifier: '4.1'
-    version: 4.1.6
+    version: 4.1.2
   zone.js:
     specifier: 0.11.8
     version: 0.11.8
@@ -64,7 +64,7 @@ packages:
       '@jridgewell/trace-mapping': 0.3.19
     dev: true
 
-  /@angular/compiler-cli@11.2.14(@angular/compiler@11.2.14)(typescript@4.1.6):
+  /@angular/compiler-cli@11.2.14(@angular/compiler@11.2.14)(typescript@4.1.2):
     resolution: {integrity: sha512-A7ltnCp03/EVqK/Q3tVUDsokgz5GHW3dSPGl0Csk7Ys5uBB9ibHTmVt4eiXA4jt0+6Bk+mKxwe5BEDqLvwYFAg==}
     engines: {node: '>=10.0'}
     hasBin: true
@@ -87,7 +87,7 @@ packages:
       source-map: 0.6.1
       sourcemap-codec: 1.4.8
       tslib: 2.6.2
-      typescript: 4.1.6
+      typescript: 4.1.2
       yargs: 16.2.0
     transitivePeerDependencies:
       - supports-color
@@ -355,17 +355,17 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@public-ui/components@1.6.0-rc.28:
-    resolution: {integrity: sha512-zcdGcv1KrfVGCcxROzsBfcZqPQqG4gyy3fH6FkAGeqiz8lDkTe20UD6eyyTvtY1Rx/WdAh2h73rLfcZOIzy5kw==}
+  /@public-ui/components@1.6.0:
+    resolution: {integrity: sha512-+9JT0lvxGV3ux0N+T9q2Nw7iMVPYoRvzLwFBZF6WFfJuc++tKJVTCS+ZVOcU9dxAnwiiReKcNSdimFd/P2HpFg==}
     dependencies:
       '@a11y-ui/core': 1.0.5
       '@floating-ui/dom': 1.5.1
-      '@public-ui/schema': 1.6.0-rc.28
+      '@public-ui/schema': 1.6.0
       i18next: 23.4.4
     dev: true
 
-  /@public-ui/schema@1.6.0-rc.28:
-    resolution: {integrity: sha512-Cnm52iAHhGiwgmlOHGBlWNzXM4RquyCTcjGs0UNEsBaa5xOHGYUDXYEbUyhtddZvA15l89fiVUfpswXJUP4NRQ==}
+  /@public-ui/schema@1.6.0:
+    resolution: {integrity: sha512-bkq1JQPf0wjj23r2STHzigHgu4oA/UnAZh52esVHQWk0Xikxh/W14Y2uCB6bJjvPHvVGZfNDFdWpuw21L7VzDw==}
     dependencies:
       '@a11y-ui/core': 1.0.5
     dev: true
@@ -447,14 +447,14 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001521
-      electron-to-chromium: 1.4.492
+      caniuse-lite: 1.0.30001522
+      electron-to-chromium: 1.4.499
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
     dev: true
 
-  /caniuse-lite@1.0.30001521:
-    resolution: {integrity: sha512-fnx1grfpEOvDGH+V17eccmNjucGUnCbP6KL+l5KqBIerp26WK/+RQ7CIDE37KGJjaPyqWXXlFUyKiWmvdNNKmQ==}
+  /caniuse-lite@1.0.30001522:
+    resolution: {integrity: sha512-TKiyTVZxJGhsTszLuzb+6vUZSjVOAhClszBr2Ta2k9IwtNBT/4dzmL6aywt0HCgEZlmwJzXJd8yNiob6HgwTRg==}
     dev: true
 
   /canonical-path@1.0.0:
@@ -482,7 +482,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /cliui@7.0.4:
@@ -539,8 +539,8 @@ packages:
     engines: {node: '>= 0.6.0'}
     dev: true
 
-  /electron-to-chromium@1.4.492:
-    resolution: {integrity: sha512-36K9b/6skMVwAIEsC7GiQ8I8N3soCALVSHqWHzNDtGemAcI9Xu8hP02cywWM0A794rTHm0b0zHPeLJHtgFVamQ==}
+  /electron-to-chromium@1.4.499:
+    resolution: {integrity: sha512-0NmjlYBLKVHva4GABWAaHuPJolnDuL0AhV3h1hES6rcLCWEIbRL6/8TghfsVwkx6TEroQVdliX7+aLysUpKvjw==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -576,8 +576,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -852,8 +852,8 @@ packages:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: true
 
-  /typescript@4.1.6:
-    resolution: {integrity: sha512-pxnwLxeb/Z5SP80JDRzVjh58KsM6jZHRAOtTpS7sXLS4ogXNKC9ANxHHZqLLeVHZN35jCtI4JdmLLbLiC1kBow==}
+  /typescript@4.1.2:
+    resolution: {integrity: sha512-thGloWsGH3SOxv1SoY7QojKi0tc+8FnOmiarEGMbd/lar7QOEd3hvlx3Fp5y6FlDUGl9L+pd4n2e+oToGMmhRQ==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
