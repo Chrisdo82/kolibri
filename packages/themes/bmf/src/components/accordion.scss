@@ -26,10 +26,6 @@
 		gap: 0.25rem;
 	}
 
-	:host > div > .kol-heading-wc button .kol-icon {
-		font-size: 1.5rem;
-	}
-
 	:host > div > .kol-heading-wc button .kol-icon::part(icon) {
 		font-family: 'Material Symbols Rounded';
 		font-weight: 400;
