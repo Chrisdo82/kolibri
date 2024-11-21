@@ -109,7 +109,7 @@ jobs:
           )
           for package in "${packages[@]}"; do
             pkg_name=$(jq -r '.name' "$package/package.json")
-            pnpm deprecated "$pkg_name@4.0.0-alpha.0" "This version was published by mistake. Please do not use this version."
+            pnpm deprecate "$pkg_name@4.0.0-alpha.0" "This version was published by mistake. Please do not use this version."
           done
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPMJS_GRANULAR_TOKEN}}
