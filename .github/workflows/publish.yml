@@ -87,6 +87,34 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store
 
+      - name: Unpublish v4
+        if: github.event.inputs.tag != ''
+        run: |
+          packages=(
+            "packages/components"
+            "packages/adapters/angular/v15"
+            "packages/adapters/angular/v16"
+            "packages/adapters/angular/v17"
+            "packages/adapters/angular/v18"
+            "packages/adapters/react"
+            "packages/adapters/react-standalone"
+            "packages/adapters/solid"
+            "packages/adapters/vue"
+            "packages/adapters/preact"
+            "packages/adapters/hydrate"
+            "packages/tools/kolibri-cli"
+            "packages/themes/default"
+            "packages/themes"
+            "packages/samples/react"
+            "packages/tools/visual-tests"
+          )
+          for package in "${packages[@]}"; do
+            pkg_name=$(jq -r '.name' "$package/package.json")
+            pnpm unpublish "$pkg_name@4.0.0-alpha.0
+          done
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPMJS_GRANULAR_TOKEN}}
+
       - name: Install
         run: pnpm i --no-frozen-lockfile --no-verify-store-integrity
 
@@ -226,7 +254,8 @@ jobs:
           )
           for package in "${packages[@]}"; do
             pkg_name=$(jq -r '.name' "$package/package.json")
-            npm dist-tag add "$pkg_name@$(jq -r '.version' "$package/package.json")" ${{github.event.inputs.tag}}
+            pnpm dist-tag add "$pkg_name@$(jq -r '.version' "$package/package.json")" ${{github.event.inputs.tag}}
+            pnpm unpublish "$pkg_name@4.0.0-alpha.0
           done
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPMJS_GRANULAR_TOKEN}}
