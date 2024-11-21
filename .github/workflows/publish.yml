@@ -109,7 +109,7 @@ jobs:
           )
           for package in "${packages[@]}"; do
             pkg_name=$(jq -r '.name' "$package/package.json")
-            pnpm unpublish "$pkg_name@4.0.0-alpha.0"
+            pnpm unpublish "$pkg_name@4.0.0-alpha.0" --force
           done
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPMJS_GRANULAR_TOKEN}}
