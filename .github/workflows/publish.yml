@@ -88,7 +88,6 @@ jobs:
             ${{ runner.os }}-pnpm-store
 
       - name: Unpublish v4
-        if: github.event.inputs.tag != ''
         run: |
           packages=(
             "packages/components"
